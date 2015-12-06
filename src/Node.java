@@ -18,7 +18,8 @@ public class Node {
 
     public void setNext(Node n){next = n;}
 
-    public int sum() {
+    public int sum() throws MyException {
+        if(data < 0) { throw new MyException("Data of node is negative"); }
         if(next == null) {
             return data;
         }
