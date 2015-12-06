@@ -13,8 +13,16 @@ public class Node {
 	}
 	
 	public int getData(){return data;}
-	public Node getNext(){return next;}
-	public void setNext(Node n){next = n;}
-	
+
+    public Node getNext(){return next;}
+
+    public void setNext(Node n){next = n;}
+
+    public int sum() {
+        if(next == null) {
+            return data;
+        }
+        return data + next.sum();
+    }
 
 }
