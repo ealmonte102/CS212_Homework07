@@ -1,3 +1,5 @@
+import java.io.*;
+
 public class Node {
 	
 	private int data;
@@ -26,4 +28,11 @@ public class Node {
         return data + next.sum();
     }
 
+    public void printBackwards(PrintWriter myWriter) throws MyException {
+        if(next != null) {
+            next.printBackwards(myWriter);
+        }
+        if(data == 9) { throw new MyException("Encountered the number 9"); }
+        myWriter.print(data + " ");
+    }
 }
