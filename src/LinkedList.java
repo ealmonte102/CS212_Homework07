@@ -1,3 +1,5 @@
+import java.io.*;
+
 public class LinkedList {
 
     private Node head;
@@ -15,6 +17,17 @@ public class LinkedList {
             current = current.getNext();
         }
         System.out.println();
+    }
+
+    public void printB() {
+        try {
+            PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(new File("Output.txt"))));
+            head.printBackwards(output);
+        } catch (IOException ioe) {
+            System.out.print(ioe.getMessage());
+        } catch (MyException me) {
+            System.out.print(me.getMessage());
+        }
     }
 
     public void append(int x) {
