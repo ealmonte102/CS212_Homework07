@@ -23,6 +23,7 @@ public class LinkedList {
         try {
             PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(new File("Output.txt"))));
             head.printBackwards(output);
+            output.flush();
         } catch (IOException ioe) {
             System.out.print(ioe.getMessage());
         } catch (MyException me) {
