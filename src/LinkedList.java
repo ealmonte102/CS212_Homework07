@@ -1,6 +1,7 @@
 public class LinkedList {
 
     private Node head;
+    private int count;
 
     public LinkedList(int x) {
         head = new Node(x);
@@ -79,4 +80,17 @@ public class LinkedList {
         current.setNext(new Node(x));
     }
 
+    public void sum(int index) throws IllegalArgumentException {
+        if(index <= 0) { System.out.println(0); }
+        if(index > count) { throw new IllegalArgumentException(); }
+        Node current = head;
+        while(index-- > 1) {
+            current = current.getNext();
+        }
+        try {
+            System.out.println(current.sum());
+        } catch (MyException me) {
+            System.out.println("Error! A node with a negative value was encountered.");
+        }
+    }
 }
