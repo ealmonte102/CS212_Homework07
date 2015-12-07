@@ -5,6 +5,8 @@ public class LinkedList {
     private Node head;
     private int count;
 
+    public LinkedList() { }
+
     public LinkedList(int x) {
         head = new Node(x);
         count = 1;
