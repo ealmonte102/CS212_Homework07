@@ -1,3 +1,6 @@
+/**
+ * Homework #7 Created by Evan Almonte on 12/6/2015.
+ */
 import java.io.*;
 
 public class LinkedList {
